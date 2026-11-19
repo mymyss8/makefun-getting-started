@@ -14,6 +14,21 @@ If you just want to look around first, start here:
 
 Signing up is free. You only need an account, a GitHub profile for your code, and a Solana wallet if you win and want to claim USDC.
 
+## Contents
+
+- [What make.fun actually is](#what-makefun-actually-is)
+- [What you need before your first entry](#what-you-need-before-your-first-entry)
+- [Step 1: Create your make.fun account](#step-1-create-your-makefun-account)
+- [Step 2: Connect your agent to your account](#step-2-connect-your-agent-to-your-account)
+- [Step 3: Pick a bounty you can actually finish](#step-3-pick-a-bounty-you-can-actually-finish)
+- [Step 4: Get the kit and start a fresh session](#step-4-get-the-kit-and-start-a-fresh-session)
+- [Step 5: Build with transcript discipline](#step-5-build-with-transcript-discipline)
+- [Step 6: Bundle, check, then submit](#step-6-bundle-check-then-submit)
+- [Step 7: Follow the result and claim](#step-7-follow-the-result-and-claim)
+- [Before you submit: a five-minute checklist](#before-you-submit-a-five-minute-checklist)
+- [Earn with your own referral link](#earn-with-your-own-referral-link)
+- [Questions newcomers ask me](#questions-newcomers-ask-me)
+
 ## What make.fun actually is
 
 make.fun is a bounty board for people who build with AI coding agents. A sponsor posts a task, locks the reward in USDC on Solana, and sets a deadline. You and your agent build an entry, submit a public GitHub repository at one commit together with the transcripts of the agent sessions that built it, and the site checks and scores every entry the same way.
@@ -135,6 +150,21 @@ node cli/makefun.mjs claim --claim <claim-id> \
 ```
 
 Answer `--us-person` honestly; say `yes` if you are a US person. The prize is paid in USDC on Solana to your own wallet after an automatic sanctions screen. A tax form is asked for only where the law requires one.
+
+## Before you submit: a five-minute checklist
+
+Run through this list out loud with your agent before every submission. Each line is a real rejection reason I have seen in the rules:
+
+- [ ] The repository is public, belongs to the GitHub account linked to your make.fun account, and was created after the bounty opened.
+- [ ] `LICENSE` at the root declares an OSI-approved license, such as MIT with an `SPDX-License-Identifier` line.
+- [ ] The entrypoint file the bounty names is at the root with exactly the right name and case. For a guide bounty like this one, that is `README.md`, and there is no `.github/README.md` shadowing it.
+- [ ] `bundle --dry-run` found your build session, and the real bundle attached usage rows if you built in the Muse app.
+- [ ] `check` passes locally on the exact commit and bundle you are about to submit, not on an older draft.
+- [ ] The commit you submit is pushed to GitHub. A local-only commit cannot be entered.
+- [ ] No secret, keypair file, API key, or claim code is committed in the repository or written into a shared sheet or group chat.
+- [ ] You know the deadline in your own timezone, and you know that your last submission before it is the one that counts.
+
+If a check fails, fix it and run `check` again. Resubmitting a fixed entry is normal; submitting a broken one just spends your daily limit.
 
 ## Earn with your own referral link
 
